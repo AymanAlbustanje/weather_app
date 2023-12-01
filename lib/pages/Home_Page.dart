@@ -66,8 +66,8 @@ class _HomePageState extends State<HomePage> {
                     '${state.weather.temperature!.celsius!.round()}°C',
                     style: const TextStyle(fontSize: 17),
                   ),
-                  Text(""),
-                  Text(""),
+                  const Text(""),
+                  const Text(""),
                   Link(
                     uri: Uri.parse('https://www.google.com/maps'),
                     builder: (context, followLink) {

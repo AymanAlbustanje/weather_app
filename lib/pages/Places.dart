@@ -126,6 +126,7 @@ class PlaceCard extends StatelessWidget {
       elevation: 5.0,
       margin: EdgeInsets.all(8.0),
       child: ListTile(
+        tileColor: Color.fromARGB(255, 143, 208, 234),
         title: Text(place.name),
         onTap: () {
           Navigator.of(context).push(
@@ -138,7 +139,7 @@ class PlaceCard extends StatelessWidget {
             ? Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Temperature: ${place.temperature!.round()}°C'),
+                  Text('Temperature: ${place.temperature!.round()}°C          Click for Details'),
                   Spacer(),
                   _buildWeatherIcon(place.temperature!),
                 ],

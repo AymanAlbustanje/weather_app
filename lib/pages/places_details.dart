@@ -32,11 +32,11 @@ class PlaceDetails extends StatelessWidget {
                   _buildInfoRow("Temperature", "${weather.temperature?.celsius!.round() ?? 'N/A'}°C"),
                   _buildInfoRow("Min Temperature", "${weather.tempMin?.celsius!.round() ?? 'N/A'}°C"),
                   _buildInfoRow("Max Temperature", "${weather.tempMax?.celsius!.round() ?? 'N/A'}°C"),
-                  _buildInfoRow("Wind Speed", "${weather.windSpeed!.round() ?? 'N/A'} m/s"),
-                  _buildInfoRow("Humidity", "${weather.humidity!.round() ?? 'N/A'}%"),
-                  _buildInfoRow("Pressure", "${weather.pressure!.round() ?? 'N/A'} hPa"),
+                  _buildInfoRow("Wind Speed", "${weather.windSpeed!.round()} m/s"),
+                  _buildInfoRow("Humidity", "${weather.humidity!.round()}%"),
+                  _buildInfoRow("Pressure", "${weather.pressure!.round()} hPa"),
                   _buildInfoRow("Description", "${weather.weatherDescription ?? 'N/A'}"),
-                  _buildInfoRow("Cloudiness", "${weather.cloudiness!.round() ?? 'N/A'}%"),
+                  _buildInfoRow("Cloudiness", "${weather.cloudiness!.round()}%"),
                 ],
               ),
             );
@@ -56,14 +56,14 @@ class PlaceDetails extends StatelessWidget {
         children: [
           Text(
             label,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18.0,
               fontWeight: FontWeight.bold,
             ),
           ),
           Text(
             value,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18.0,
             ),
           ),

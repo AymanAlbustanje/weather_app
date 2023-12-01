@@ -3,8 +3,6 @@ import 'package:weather_app/pages/places_details.dart';
 import 'package:weather/weather.dart';
 import 'package:weather_app/Data/my_data.dart';
 
-import 'package:weather_app/pages/Hourly_forecast.dart';
-
 class Places extends StatefulWidget {
   const Places({Key? key}) : super(key: key);
 

@@ -4,7 +4,6 @@ import 'package:equatable/equatable.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:weather/weather.dart';
 import 'package:weather_app/pages/Places.dart';
-import 'package:weather_app/pages/Places.dart';
 import '../Data/my_data.dart';
 
 part 'weather_bloc_event.dart';

@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                                   MaterialStateProperty.all(const Color.fromARGB(255, 135, 206, 235))),
                           onPressed: followLink,
                           child: const Text(
-                            "Open Google Maps",
+                            "My location on Google Maps",
                             style: TextStyle(
                               color: Colors.black,
                             ),

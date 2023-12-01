@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
+import 'package:url_launcher/link.dart';
 import 'package:weather_app/bloc/weather_bloc_bloc.dart';
 import '../Others/MyDrawer.dart';
 
@@ -64,6 +65,24 @@ class _HomePageState extends State<HomePage> {
                   Text(
                     '${state.weather.temperature!.celsius!.round()}°C',
                     style: const TextStyle(fontSize: 17),
+                  ),
+                  Text(""),
+                  Text(""),
+                  Link(
+                    uri: Uri.parse('https://www.google.com/maps'),
+                    builder: (context, followLink) {
+                      return ElevatedButton(
+                          style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStateProperty.all(const Color.fromARGB(255, 135, 206, 235))),
+                          onPressed: followLink,
+                          child: const Text(
+                            "Open Google Maps",
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ));
+                    },
                   )
                 ],
               );

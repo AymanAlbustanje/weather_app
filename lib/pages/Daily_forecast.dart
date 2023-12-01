@@ -20,7 +20,7 @@ class DailyForecast extends StatelessWidget {
         child: BlocConsumer<WeatherBlocBloc, WeatherBlocState>(
           listener: (context, state) {
             if (state is weatherblocFailure) {
-              // Handle failure, show an error message, etc.
+              Text("retry");
             }
           },
           builder: (context, state) {

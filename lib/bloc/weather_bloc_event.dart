@@ -33,3 +33,12 @@ class FetchDailyForecast extends WeatherBlocEvent {
   @override
   List<Object> get props => [position];
 }
+
+class FetchWeatherByCityName extends WeatherBlocEvent {
+  final Place place;
+
+  const FetchWeatherByCityName(this.place);
+
+  @override
+  List<Object> get props => [place];
+}

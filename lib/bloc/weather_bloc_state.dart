@@ -20,21 +20,3 @@ final class weatherblocSuccess extends WeatherBlocState {
   @override
   List<Object> get props => [weather];
 }
-
-class WeatherblocHourlyForecast extends WeatherBlocState {
-  final List<Weather> hourlyForecast;
-
-  WeatherblocHourlyForecast(this.hourlyForecast);
-
-  @override
-  List<Object> get props => [hourlyForecast];
-}
-
-class WeatherblocDailyForecast extends WeatherBlocState {
-  final List<Weather> dailyForecast;
-
-  WeatherblocDailyForecast(this.dailyForecast);
-
-  @override
-  List<Object> get props => [dailyForecast];
-}

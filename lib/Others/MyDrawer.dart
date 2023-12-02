@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:geolocator/geolocator.dart';
 import 'package:weather_app/pages/Daily_forecast.dart';
 import 'package:weather_app/pages/Hourly_forecast.dart';
 import 'package:weather_app/pages/Places.dart';
@@ -42,12 +41,8 @@ class MyDrawer extends StatelessWidget {
           ),
           ListTile(
             title: Text('Daily Forecast'),
-            onTap: () async {
-              // Get the user's current position
-              Position position = await Geolocator.getCurrentPosition();
-              Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => DailyForecast(position: position),
-              ));
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => DailyForecast()));
             },
           ),
           ListTile(

@@ -39,22 +39,6 @@ class WeatherBlocBloc extends Bloc<WeatherBlocEvent, WeatherBlocState> {
       }
     });
 
-    on<FetchHourlyForecast>((event, emit) async {
-      emit(weatherblocLoading());
-      try {
-        WeatherFactory wf = WeatherFactory(API_KEY);
-
-        List<Weather> hourlyForecast = await wf.fiveDayForecastByLocation(
-          event.position.latitude,
-          event.position.longitude,
-        );
-
-        emit(WeatherblocHourlyForecast(hourlyForecast));
-      } catch (e) {
-        emit(weatherblocFailure());
-      }
-    });
-
     on<FetchDailyForecast>((event, emit) async {
       emit(weatherblocLoading());
       try {

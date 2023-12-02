@@ -57,8 +57,8 @@ class _PlacesListState extends State<PlacesList> {
       name: 'Syria',
     ),
     Place(
-      code: 'JOR',
-      name: 'Jordan',
+      code: 'PAL',
+      name: 'Palestine',
     ),
   ];
 

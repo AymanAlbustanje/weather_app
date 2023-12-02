@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:weather/weather.dart';
-
-import '../bloc/weather_bloc_bloc.dart';
+import 'package:weather_app/bloc/weather_bloc_bloc.dart';
 
 class DailyForecast extends StatelessWidget {
-  const DailyForecast({Key? key}) : super(key: key);
+  final Position position;
+  const DailyForecast({Key? key, required this.position}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class DailyForecast extends StatelessWidget {
         child: BlocConsumer<WeatherBlocBloc, WeatherBlocState>(
           listener: (context, state) {
             if (state is weatherblocFailure) {
-              Text("retry");
+              Text("error");
             }
           },
           builder: (context, state) {
@@ -49,19 +50,10 @@ class TileList extends StatelessWidget {
     return ListView.builder(
       itemCount: dailyForecast.length,
       itemBuilder: (context, index) {
-        Weather dayWeather = dailyForecast[index];
-
-        return Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Card(
-            color: Color.fromARGB(255, 135, 206, 235),
-            elevation: 5.0,
-            child: ListTile(
-              title: Text('Day ${index + 1}'),
-              subtitle: Text('Temperature: ${dayWeather.temperature!.celsius!}°C'),
-              trailing: Icon(Icons.wb_sunny), // Add your desired icon
-            ),
-          ),
+        return ListTile(
+          title: Text('Day ${index + 1}'),
+          subtitle: Text('Temperature: ${dailyForecast[index].temperature!.celsius!}°C'),
+          trailing: Icon(Icons.wb_sunny),
         );
       },
     );

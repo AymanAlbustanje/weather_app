@@ -1,14 +1,10 @@
-import 'dart:convert';
-
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
 import 'package:equatable/equatable.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:weather/weather.dart';
-import 'package:weather_app/Models/weather_model.dart';
 import 'package:weather_app/pages/Places.dart';
 import '../Data/my_data.dart';
-import 'package:http/http.dart' as http;
 
 part 'weather_bloc_event.dart';
 part 'weather_bloc_state.dart';

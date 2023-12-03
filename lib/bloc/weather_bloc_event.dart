@@ -24,13 +24,3 @@ class FetchWeatherByCityName extends WeatherBlocEvent {
   @override
   List<Object> get props => [place];
 }
-
-class FetchDailyWeather extends WeatherBlocEvent {
-  final Position position;
-  final bool isDaily; // Define the 'isDaily' parameter
-
-  const FetchDailyWeather(this.position, {this.isDaily = false}); // Set default value
-
-  @override
-  List<Object> get props => [position, isDaily]; // Update props to include 'isDaily'
-}

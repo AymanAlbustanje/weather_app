@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
-class DailyForecast extends StatelessWidget {
+class DailyForecast extends StatefulWidget {
+  @override
+  _DailyForecastState createState() => _DailyForecastState();
+}
+
+class _DailyForecastState extends State<DailyForecast> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

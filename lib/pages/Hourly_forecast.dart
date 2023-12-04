@@ -13,7 +13,7 @@ class HourlyForecast extends StatefulWidget {
 
 class _HourlyForecastState extends State<HourlyForecast> {
   final String apiKey = API_KEY;
-  final String city = 'Hebron';
+  final String city = 'Palestine';
 
   List<Map<String, dynamic>>? hourlyForecast;
 

@@ -11,7 +11,7 @@ class DailyForecast extends StatefulWidget {
 
 class _DailyForecastState extends State<DailyForecast> {
   final String apiKey = API_KEY;
-  final String city = 'Hebron';
+  final String city = 'Palestine';
   final String apiUrl = 'http://api.openweathermap.org/data/2.5/forecast?q=Hebron&appid=$API_KEY';
 
   Future<Map<String, dynamic>> getWeatherData() async {

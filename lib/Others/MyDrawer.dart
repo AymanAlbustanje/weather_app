@@ -28,27 +28,27 @@ class MyDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            title: Text('Home'),
+            title: const Text('Home'),
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomePage()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const HomePage()));
             },
           ),
           ListTile(
-            title: Text('Hourly Forecast'),
+            title: const Text('Hourly Forecast'),
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => HourlyForecast()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const HourlyForecast()));
             },
           ),
           ListTile(
-            title: Text('Daily Forecast'),
+            title: const Text('Daily Forecast'),
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) => DailyForecast()));
             },
           ),
           ListTile(
-            title: Text('Places'),
+            title: const Text('Places'),
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => Places()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Places()));
             },
           ),
         ],

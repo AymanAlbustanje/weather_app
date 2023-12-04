@@ -14,9 +14,9 @@ class _PlacesState extends State<Places> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 195, 218, 228),
+      backgroundColor: const Color.fromARGB(255, 195, 218, 228),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 135, 206, 235),
+        backgroundColor: const Color.fromARGB(255, 135, 206, 235),
         title: const Text(
           'Places',
           style: TextStyle(
@@ -107,12 +107,7 @@ class Place {
   double? temperature;
   IconData? weatherIcon;
 
-  Place({
-    required this.code,
-    required this.name,
-    this.temperature,
-    this.weatherIcon,
-  });
+  Place({required this.code, required this.name, this.temperature, this.weatherIcon});
 }
 
 class PlaceCard extends StatelessWidget {
@@ -124,9 +119,9 @@ class PlaceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 5.0,
-      margin: EdgeInsets.all(8.0),
+      margin: const EdgeInsets.all(8.0),
       child: ListTile(
-        tileColor: Color.fromARGB(255, 143, 208, 234),
+        tileColor: const Color.fromARGB(255, 143, 208, 234),
         title: Text(place.name),
         onTap: () {
           Navigator.of(context).push(
@@ -140,22 +135,22 @@ class PlaceCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text('Temperature: ${place.temperature!.round()}°C          Click for Details'),
-                  Spacer(),
+                  const Spacer(),
                   _buildWeatherIcon(place.temperature!),
                 ],
               )
-            : Text('Fetching weather data...'),
+            : const Text('Fetching weather data...'),
       ),
     );
   }
 
   Icon _buildWeatherIcon(double temperature) {
     if (temperature > 20) {
-      return Icon(Icons.wb_sunny);
+      return const Icon(Icons.wb_sunny);
     } else if (temperature <= 20 && temperature > 10) {
-      return Icon(Icons.cloud);
+      return const Icon(Icons.cloud);
     } else {
-      return Icon(Icons.cloudy_snowing);
+      return const Icon(Icons.cloudy_snowing);
     }
   }
 }

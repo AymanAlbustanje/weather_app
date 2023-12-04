@@ -25,7 +25,7 @@ class PlaceDetails extends StatelessWidget {
           } else if (snapshot.hasData) {
             Weather weather = snapshot.data!;
             return Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -41,7 +41,7 @@ class PlaceDetails extends StatelessWidget {
               ),
             );
           } else {
-            return Center(child: Text('No weather data available'));
+            return const Center(child: Text('No weather data available'));
           }
         },
       ),

@@ -39,7 +39,7 @@ class _DailyForecastState extends State<DailyForecast> {
           style: TextStyle(color: Colors.black),
         ),
         bottom: const PreferredSize(
-          preferredSize: Size.fromHeight(20.0), // Adjust the height as needed
+          preferredSize: Size.fromHeight(20.0),
           child: Padding(
             padding: EdgeInsets.only(bottom: 8.0),
             child: Text(
